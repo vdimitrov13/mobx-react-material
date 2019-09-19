@@ -5,10 +5,12 @@ import {observer} from 'mobx-react';
 import DevTools from 'mobx-react-devtools';
 import Button from '@material-ui/core/Button';
 
-class AppState {
+@observer
+class TimerView extends React.Component<{}, {}> {
     @observable timer = 0;
 
-    constructor() {
+    constructor(props) {
+        super(props);
         setInterval(() => {
             this.timer += 1;
         }, 1000);
@@ -17,26 +19,22 @@ class AppState {
     resetTimer() {
         this.timer = 0;
     }
-}
 
-@observer
-class TimerView extends React.Component<{appState: AppState}, {}> {
     render() {
         return (
             <div>
                 <Button variant="contained" color="primary" onClick={this.onReset}>
-                    Seconds passed: {this.props.appState.timer}
+                    Seconds passed: {this.timer}
                 </Button>
-                
+
                 <DevTools />
             </div>
         );
      }
 
      onReset = () => {
-         this.props.appState.resetTimer();
+         this.resetTimer();
      }
 };
 
-const appState = new AppState();
-ReactDOM.render(<TimerView appState={appState} />, document.getElementById('root'));
+ReactDOM.render(<TimerView />, document.getElementById('root'));
