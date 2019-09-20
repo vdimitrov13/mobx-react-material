@@ -4,6 +4,19 @@ import {observable} from 'mobx';
 import {observer} from 'mobx-react';
 import DevTools from 'mobx-react-devtools';
 import Button from '@material-ui/core/Button';
+import ButtonAppBar from './AppBar'
+
+const useStyles = theme => ({
+    root: {
+      flexGrow: 1,
+    },
+    menuButton: {
+      marginRight: theme.spacing(2),
+    },
+    title: {
+      flexGrow: 1,
+    },
+  });
 
 @observer
 class TimerView extends React.Component<{}, {}> {
@@ -23,9 +36,12 @@ class TimerView extends React.Component<{}, {}> {
     render() {
         return (
             <div>
-                <Button variant="contained" color="primary" onClick={this.onReset}>
+                <ButtonAppBar classes={useStyles}></ButtonAppBar>
+
+                {/* <Button variant="contained" color="primary" onClick={this.onReset}>
                     Seconds passed: {this.timer}
-                </Button>
+                </Button> */}
+                
 
                 <DevTools />
             </div>
