@@ -6,9 +6,10 @@ import DevTools from 'mobx-react-devtools';
 import ButtonAppBar from './AppBar';
 import TitlebarGridList from './TitleBar';
 import {useStyles, titleStyles} from './utils/constants';
+import SimpleMenu from '../src/MenuBar'
 
 @observer
-class TimerView extends React.Component<{}, {}> {
+class ApplicationStart extends React.Component<{}, {}> {
     @observable timer = 0;
 
     constructor(props) {
@@ -26,12 +27,7 @@ class TimerView extends React.Component<{}, {}> {
         return (
             <div>
                 <ButtonAppBar classes={useStyles}></ButtonAppBar>
-
-                {/* <Button variant="contained" color="primary" onClick={this.onReset}>
-                    Seconds passed: {this.timer}
-                </Button> */}
                 <TitlebarGridList classes = {titleStyles}></TitlebarGridList>
-
                 <DevTools />
             </div>
         );
@@ -42,4 +38,4 @@ class TimerView extends React.Component<{}, {}> {
      }
 };
 
-ReactDOM.render(<TimerView />, document.getElementById('root'));
+ReactDOM.render(<ApplicationStart />, document.getElementById('root'));
