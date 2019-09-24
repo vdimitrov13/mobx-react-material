@@ -16,7 +16,7 @@ render(){
         <Toolbar>
           <SimpleMenu></SimpleMenu>
           <Typography variant="h6" className={this.props.classes.title}>
-            На Владо Апчето
+            Application Start
           </Typography>
         </Toolbar>
       </AppBar>

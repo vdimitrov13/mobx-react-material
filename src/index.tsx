@@ -6,7 +6,6 @@ import DevTools from 'mobx-react-devtools';
 import ButtonAppBar from './AppBar';
 import TitlebarGridList from './TitleBar';
 import {useStyles, titleStyles} from './utils/constants';
-import SimpleMenu from '../src/MenuBar'
 
 @observer
 class ApplicationStart extends React.Component<{}, {}> {

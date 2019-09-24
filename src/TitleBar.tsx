@@ -10,12 +10,12 @@ const tileData = [
   {
     img: "https://images.unsplash.com/photo-1531804055935-76f44d7c3621?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80",
     title: 'Random',
-    author: 'Nqkuv Gei',
+    author: 'Placeholder Author',
   },
   {
     img: "https://images.pexels.com/photos/67636/rose-blue-flower-rose-blooms-67636.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
     title: 'Random',
-    author: 'Nqkuv Gei',
+    author: 'Placeholder Author',
   }
  ];
 
